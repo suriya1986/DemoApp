@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      dotnet: 3.1
+    commands:
+      - echo Build started on `date`
+      - export PATH="$PATH:/root/.dotnet/tools"
+      - dotnet tool install -g Amazon.Lambda.Tools
+  build:
+    commands:
+      - cd DemoLambda
+      - dotnet lambda package --configuration release --framework netcoreapp3.1 -o DemoLambda.zip     
+  post_build:
+    commands:
+      - aws s3 cp DemoLambda.zip s3://suriya-build-artifacts/DemoLambda.zip
