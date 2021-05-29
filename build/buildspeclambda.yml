@@ -3,6 +3,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
+      - chmod +x ./build/envSetup.sh
       - ./build/envSetup.sh
   install:
     runtime-versions:
