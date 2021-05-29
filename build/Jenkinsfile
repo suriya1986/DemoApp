@@ -2,7 +2,6 @@ pipeline {
     agent any
     stages {
         stage ('Build Lambda') {
-            echo
             steps {
                echo  "${BUILD_NUMBER}"
                awsCodeBuild(projectName: 'Jenkins', credentialsType:'jenkins', credentialsId: 'CodeBuildJenkins', region: 'ap-south-1', sourceControlType: 'jenkins',buildSpecFile:'build/buildspeclambda.yml', envVariables :'[{environment, dev},{action, plan}]')
