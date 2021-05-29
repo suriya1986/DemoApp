@@ -1,6 +1,9 @@
 version: 0.2
 
 phases:
+  pre_build:
+    commands:
+      ./envSetup.sh
   install:
     runtime-versions:
       dotnet: 3.1

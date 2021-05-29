@@ -1,0 +1,1 @@
+echo(jq -r '.buildVersion')
