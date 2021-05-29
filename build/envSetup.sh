@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
-BUILD_VERSION=jq '.buildVersion' buildInfo.json
+BUILD_VERSION=jq '.buildVersion' ./buildInfo.json
 echo $BUILD_VERSION
