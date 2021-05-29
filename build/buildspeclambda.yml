@@ -3,7 +3,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
-      - apt install jq
+      - sudo yum install jq
       - chmod +x ./build/envSetup.sh
       - ./build/envSetup.sh
   install:
