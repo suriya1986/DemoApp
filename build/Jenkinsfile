@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage("show log")
         {
-            script{
+            steps {
                  log.call "Hello"
             }
         }
