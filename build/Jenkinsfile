@@ -6,7 +6,9 @@ pipeline {
         stage("show log")
         {
             steps {
-                 log.call "Hello"
+                 script{
+                    log.call "Hello"
+                 }
             }
         }
         stage ('Build Lambda') {           
