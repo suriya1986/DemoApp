@@ -7,6 +7,7 @@ pipeline {
         {
             steps {
                  script{
+                    buildversion()
                     log.call "Suriya"
                  }
             }
