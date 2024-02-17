@@ -1,4 +1,4 @@
- @Library('pipeline-library-demo')_
+ @Library('pipeline-library-demo@main')_
 
 pipeline {
     agent any
@@ -7,7 +7,7 @@ pipeline {
         {
             steps {
                  script{
-                    buildversion.getBuildVersion()
+                    getBuildVersion()
                     log.call "Suriya"
                  }
             }
